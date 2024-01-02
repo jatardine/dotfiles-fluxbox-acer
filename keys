@@ -138,6 +138,4 @@ Control Mod4 F12 :TakeToWorkspace 12
 
 # take a screenshot (full)
 Print :Exec scrot 'Screenshot_%Y-%m-%d-%I-%M-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir PICTURES) ; viewnior $$(xdg-user-dir PICTURES)/$f'
-Print s :Exec scrot -s 'Screenshot_%Y-%m-%d-%I-%M-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir PIC    TURES) ; viewnior $$(xdg-user-dir PICTURES)/$f'
-Print u :Exec scrot -u 'Screenshot_%Y-%m-%d-%I-%M-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir PIC    TURES) ; viewnior $$(xdg-user-dir PICTURES)/$f'
 
