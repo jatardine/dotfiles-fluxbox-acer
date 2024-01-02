@@ -88,4 +88,6 @@ At this time, `scrot` refuses to capture anything but the entire screen, so you 
 ## TODO
 
 - clean up `keys`
+- include theme for Alacritty
 - write an install script
+- sort this repo
