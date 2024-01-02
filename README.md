@@ -17,7 +17,6 @@ This is one of my three different Fluxbox configs and the most bare-bone with li
 - cbatticon (systray)
 - xfce4-settings
 - feh (background)
-- systemd (for menu shortcuts calling "Reboot" and "Shutdown")
 - PulseAudio (sorry but my laptop refuses to call amixer)
 
 Optional but recommended:
@@ -29,6 +28,7 @@ Menu dependencies (optional – you may change `menu` according to your usecase)
 - librewolf (web browser)
 - leafpad (text editor)
 - betterlockscreen (lock & suspend)
+- systemd (for menu shortcuts calling "Reboot" and "Shutdown")
 
 ### Manual installation for first-time users of Fluxbox (recommended)
 
