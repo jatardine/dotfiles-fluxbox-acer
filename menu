@@ -1,0 +1,135 @@
+[begin] (FluxBox)
+[exec] (Terminal Emulator) {alacritty}
+[exec] (Web Browser) {librewolf}
+[exec] (File Manager) {thunar}
+[exec] (Text Editor) {leafpad}
+[separator]
+    [submenu] (Development)
+        [exec] (Geany) {geany}
+        [exec] (Icon Browser) {yad-icon-browser}
+        [exec] (Tclsh8.6) {alacritty -e tclsh8.6}
+    [end]
+    [submenu] (Editors)
+        [exec] (AA Fire) {alacritty -e aafire -driver slang}
+        [exec] (Leafpad) {leafpad}
+        [exec] (Vim) {alacritty -e vim}
+    [end]
+    [submenu] (Graphics)
+        [exec] (Avvie) {avvie}
+        [exec] (Viewnior) {viewnior}
+    [end]
+    [submenu] (Multimedia)
+        [exec] (ALSA mixer) {alacritty -e alsamixer}
+        [exec] (Echomixer) {echomixer}
+        [exec] (Envy24 Control) {envy24control}
+        [exec] (HDAJackRetask) {hdajackretask}
+        [exec] (HDSPConf) {hdspconf}
+        [exec] (HDSPMixer) {hdspmixer}
+        [exec] (Hwmixvolume) {hwmixvolume}
+        [exec] (mpv Media Player) {mpv --player-operation-mode=pseudo-gui}
+        [exec] (ncmpcpp) {alacritty -e ncmpcpp}
+        [exec] (PulseAudio Volume Control) {pavucontrol}
+        [exec] (Qt V4L2 test Utility) {qv4l2}
+        [exec] (Qt V4L2 video capture utility) {qvidcap}
+        [exec] (Rmedigicontrol) {rmedigicontrol}
+    [end]
+    [submenu] (Network)
+        [exec] (Amfora) {alacritty -e amfora}
+        [exec] (Avahi SSH Server Browser) {bssh}
+        [exec] (Avahi VNC Server Browser) {bvnc}
+        [exec] (hx) {alacritty -e hx}
+        [exec] (Lagrange) {lagrange}
+        [exec] (LibreWolf) {/usr/lib/librewolf/librewolf}
+        [exec] (Lynx) {alacritty -e lynx}
+        [exec] (Mail Reader) {exo-open --launch MailReader}
+        [exec] (NetworkManager Dmenu) {networkmanager_dmenu}
+        [exec] (Web Browser) {exo-open --launch WebBrowser}
+        [exec] (Wike) {wike}
+    [end]
+    [submenu] (Office)
+        [exec] (Atril Document Viewer) {atril}
+        [exec] (Typora) {typora}
+    [end]
+    [submenu] (Science)
+        [exec] (bc) {alacritty -e bc}
+        [exec] (Calc) {alacritty -e calc}
+        [exec] (dc) {alacritty -e dc}
+    [end]
+    [submenu] (Shells)
+        [exec] (Alacritty) {alacritty}
+        [exec] (File Manager PCManFM) {pcmanfm}
+        [exec] (GIT) {alacritty -e git}
+        [exec] (ranger) {alacritty -e ranger}
+        [exec] (Thunar File Manager) {thunar}
+        [exec] (Xfce Terminal) {xfce4-terminal}
+    [end]
+    [submenu] (System)
+        [submenu] (Settings)
+            [submenu] (GNOME)
+                [exec] (Advanced Network Configuration) {nm-connection-editor}
+            [end]
+            [submenu] (Xfce)
+                [exec] (Settings Manager) {xfce4-settings-manager}
+            [end]
+            [exec] (Accessibility) {xfce4-accessibility-settings}
+            [exec] (Appearance) {xfce4-appearance-settings}
+            [exec] (Color Profiles) {xfce4-color-settings}
+            [exec] (Customize Look and Feel) {lxappearance}
+            [exec] (Default Applications) {xfce4-mime-settings}
+            [exec] (Display) {xfce4-display-settings}
+            [exec] (File Manager Settings) {thunar-settings}
+            [exec] (Keyboard) {xfce4-keyboard-settings}
+            [exec] (Mouse and Touchpad) {xfce4-mouse-settings}
+            [exec] (nitrogen) {nitrogen}
+            [exec] (Notifications) {xfce4-notifyd-config}
+            [exec] (Openbox Configuration Manager) {obconf}
+            [exec] (Power Manager) {xfce4-power-manager-settings}
+            [exec] (Qt5 Settings) {qt5ct}
+            [exec] (Removable Drives and Media) {thunar-volman-settings}
+            [exec] (Settings Editor) {xfce4-settings-editor}
+            [exec] (Xfce Terminal Settings) {xfce4-terminal --preferences}
+            [exec] (YAD settings) {yad-settings}
+        [end]
+        [exec] (auto-cpufreq) {auto-cpufreq-gtk}
+        [exec] (Avahi Zeroconf Browser) {avahi-discover}
+        [exec] (Disk Usage Analyzer) {baobab}
+        [exec] (GParted) {gparted}
+        [exec] (Glances) {alacritty -e glances}
+        [exec] (Hardware Locality lstopo) {lstopo}
+        [exec] (Htop) {alacritty -e htop}
+        [exec] (LSHW) {gtk-lshw}
+        [exec] (pstree) {alacritty -e pstree}
+        [exec] (pstree X11) {alacritty -e pstree.x11}
+        [exec] (Top) {alacritty -e top}
+    [end]
+    [submenu] (Utilities)
+        [exec] (About Xfce) {xfce4-about}
+        [exec] (Catfish File Search) {catfish}
+        [exec] (Console Matrix [Text]) {alacritty -e cmatrix}
+        [exec] (Console Matrix [Virtual Console]) {alacritty -e cmatrix -l}
+        [exec] (Console Matrix [X11]) {cmatrix -x}
+        [exec] (File Manager) {exo-open --launch FileManager}
+        [exec] (Info) {alacritty -e info}
+        [exec] (picom) {picom}
+        [exec] (Terminal Emulator) {exo-open --launch TerminalEmulator}
+        [exec] (Xarchiver) {xarchiver}
+        [exec] (Xkill) {xkill}
+    [end]
+    [separator]
+    [submenu] (FluxBox)
+        [workspaces] (Workspaces)
+        [submenu] (Styles)
+            [stylesdir] (/usr/share/fluxbox/styles)
+            [stylesdir] (~/.fluxbox/styles)
+        [end]
+        [config] (Configure)
+        [reconfig] (Reconfig Fluxbox)
+        [restart] (Restart Fluxbox)
+        [separator]
+        [exit] (Logout)
+        [exec] (Lock) {betterlockscreen --lock}
+        [exec] (Suspend) {betterlockscreen --suspend}
+        [exec] (Reboot) {systemctl reboot}
+        [exec] (Shutdown) {systemctl poweroff}
+    [end]
+[end]
