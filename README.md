@@ -1,6 +1,6 @@
 # Fluxbox dotfiles (Acer)
 
-![](https://github.com/jatardine/dotfiles-fluxbox-acer/blob/main/fluxbox-acer-prev.png)
+![](https://github.com/jatardine/dotfiles-fluxbox-acer/blob/main/styles/fluxbox-acer-prev.png)
 
 This is one of my three different Fluxbox configs and the most bare-bone with little dependencies. This repo acts as a secondary backup for my config but you're free to clone and manually copy all files you desire:
 
