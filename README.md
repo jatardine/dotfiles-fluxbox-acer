@@ -9,6 +9,7 @@ This is one of my three different Fluxbox configs and the most bare-bone with li
 ### Dependencies:
 
 - fluxbox
+- Isokeva Custom (font)
 - dunst (notifications)
 - Network Manager (dmenu)
 - scrot (screenshots)
