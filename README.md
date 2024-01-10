@@ -77,18 +77,14 @@ XF86AudioRaiseVolume :Exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 XF86AudioLowerVolume :Exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 XF86AudioMute :Exec pactl set-sink-mute 0 toggle
 
-# exit fluxbox
-Control Alt q :Exit
-
 # take a screenshot (full)
 Print :Exec scrot 'Screenshot_%Y-%m-%d-%I-%M-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir PICTURES) ; viewnior $$(xdg-user-dir PICTURES)/$f'
 ```
 
-At this time, `scrot` refuses to capture anything but the entire screen, so you want to select an area or only capture the active window, you may have to set an approriate keybind yourself, as scrot refuses to read its respective flags. I'm still working on fixing that, though.
+At this time, `scrot` refuses to capture anything but the entire screen, so you want to select an area or only capture the active window, you may have to set an approriate keybind yourself. I'm still working on fixing that, though.
 
 ## TODO
 
 - clean up `keys`
 - include theme for Alacritty
-- write an install script
-- sort this repo
+✓ sort this repo
