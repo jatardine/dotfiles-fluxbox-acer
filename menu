@@ -116,6 +116,11 @@
         [exec] (Xkill) {xkill}
     [end]
     [separator]
+    [submenu] (Screenshot)
+        [Exec] (Entire Screen) {scrot -f 'Screenshot_%Y-%m-%d-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir PICTURES) ; viewnior $$(xdg-user-dir PICTURES)/$f'}
+        [Exec] (Selected Area) {scrot -f -s 'Screenshot_%Y-%m-%d-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir PICTURES) ; viewnior $$(xdg-user-dir PICTURES)/$f'}
+        [Exec] (Active Window) {scrot -f -u 'Screenshot_%Y-%m-%d-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir PICTURES) ; viewnior $$(xdg-user-dir PICTURES)/$f'}
+     [end]
     [submenu] (FluxBox)
         [workspaces] (Workspaces)
         [submenu] (Styles)
