@@ -87,4 +87,4 @@ At this time, `scrot` refuses to capture anything but the entire screen, so you 
 
 - clean up `keys`
 - include theme for Alacritty
-✓ sort this repo
+- ✓ sort this repo
