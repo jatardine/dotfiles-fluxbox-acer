@@ -8,30 +8,30 @@ This is one of my three different Fluxbox configs and the most bare-bone with li
 
 ### Dependencies:
 
-- fluxbox
-- Isokeva Custom (font)
-- dunst (notifications)
-- Network Manager (dmenu)
+- Fluxbox (yeah)
+- Isokeva Custom (any [Isokeva font](https://typeof.net/Iosevka/) works but may require some manual editing in some places)
+- Network Manager
 - scrot (screenshots)
 - nm-applet (systray)
 - volumeicon (systray)
 - cbatticon (systray)
-- xfce4-settings
-- feh (background)
-- PulseAudio (sorry but my laptop refuses to call amixer)
+- Xfce4 Settings
+- Feh (background)
+- PulseAudio (sorry lmao)
 
-Optional but recommended:
+**Optional but recommended:**
 
+- Dunst (notifications)
 - menumaker
 
 Menu dependencies (optional – you may change `menu` according to your usecase):
-- alacritty (terminal)
-- librewolf (web browser)
-- leafpad (text editor)
-- betterlockscreen (lock & suspend)
-- systemd (for menu shortcuts calling "Reboot" and "Shutdown")
+- Alacritty (Terminal) – [CUSTOM THEME](https://github.com/jatardine/dotfiles-alacritty)
+- LibreWolf (Web Browser)
+- Leafpad (Text Editor)
+- betterlockscreen (Lock & Suspend)
+- systemd (Reboot & Shutdown)
 
-### Manual installation for first-time users of Fluxbox (recommended)
+## Manual installation for first-time users of Fluxbox (optional)
 
 Once you've cloned this repo and downloaded all dependencies, DO NOT immediatedly run Fluxbox, instead open your terminal and create `.fluxbox` manually:
 
@@ -81,10 +81,10 @@ XF86AudioMute :Exec pactl set-sink-mute 0 toggle
 Print :Exec scrot 'Screenshot_%Y-%m-%d-%I-%M-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir PICTURES) ; viewnior $$(xdg-user-dir PICTURES)/$f'
 ```
 
-At this time, `scrot` refuses to capture anything but the entire screen, so you want to select an area or only capture the active window, you may have to set an approriate keybind yourself. I'm still working on fixing that, though.
+At this time, `scrot` refuses to capture anything but the entire screen via keybinds, so you want to select an area or only capture the active window, you may have to set an approriate keybind yourself. I'm still working on fixing that, though.
 
 ## TODO
 
 - clean up `keys`
-- include theme for Alacritty
+- ✓ include theme for Alacritty
 - ✓ sort this repo
