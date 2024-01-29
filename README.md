@@ -15,7 +15,6 @@ This is one of my three different Fluxbox configs and the most bare-bone with li
 - nm-applet (systray)
 - volumeicon (systray)
 - cbatticon (systray)
-- Xfce4 Settings
 - Feh (background)
 - PulseAudio (sorry lmao)
 
@@ -27,6 +26,7 @@ This is one of my three different Fluxbox configs and the most bare-bone with li
 Menu dependencies (optional – you may change `menu` according to your usecase):
 - Alacritty (Terminal) – [CUSTOM THEME](https://github.com/jatardine/dotfiles-alacritty)
 - LibreWolf (Web Browser)
+- PCManFM (File Manager)
 - Leafpad (Text Editor)
 - betterlockscreen (Lock & Suspend)
 - systemd (Reboot & Shutdown)
