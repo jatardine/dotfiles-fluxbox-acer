@@ -1,7 +1,7 @@
 [begin] (FluxBox)
 [exec] (Terminal Emulator) {alacritty}
 [exec] (Web Browser) {librewolf}
-[exec] (File Manager) {thunar}
+[exec] (File Manager) {pcmanfm}
 [exec] (Text Editor) {leafpad}
 [separator]
     [submenu] (Development)
