@@ -36,11 +36,11 @@ Menu dependencies (optional – you may change `menu` according to your usecase)
 
 Once you've cloned this repo and downloaded all dependencies, DO NOT immediatedly run Fluxbox, instead open your terminal and create `.fluxbox` manually:
 
-`mkdir ~/.fluxbox`
+`$ mkdir ~/.fluxbox`
 
 Now you can copy all Fluxbox files to your new directory:
 
-`cp ~/fluxbox-dotfiles-acer ~/.fluxbox`
+`$ cp ~/fluxbox-dotfiles-acer ~/.fluxbox`
 
 This will provide you a decent session to get started, as the default only provides menu entries for xterm and Firefox.
 
@@ -48,7 +48,7 @@ This will provide you a decent session to get started, as the default only provi
 
 The menu will require additional tweaks to properly list all your installed software and remove unnecessary entries. You may want to use `menumaker` to automatically create a menu but keep in mind that this will overwrite the separated sections. `[TERMINAL]` needs to be replaced with your preferred Terminal Emulator:
 
-`mmaker fluxbox -t [TERMINAL]`
+`$ mmaker fluxbox -t [TERMINAL]`
 
 If you want to re-add the original shortcuts, just copy the appropriate sections from your downloaded fluxbox-dotfiles-acer's `menu` file.
 
@@ -58,7 +58,7 @@ This wallpaper is from my hobbyist observations, hence I ask anyone fetching thi
 
 If you want to use the default background, open your terminal and run feh:
 
-`feh --bg-scale ~/.fluxbox/backgrounds/aglaisio.jpg`
+`$ feh --bg-scale ~/.fluxbox/backgrounds/aglaisio.jpg`
 
 Feh will then automatically create the necessary `.fehbg` called by the startup script.
 
@@ -83,6 +83,19 @@ Print :Exec scrot 'Screenshot_%Y-%m-%d-%I-%M-%S_$wx$h.png' -e 'mv $f $$(xdg-user
 ```
 
 At this time, `scrot` refuses to capture anything but the entire screen via keybinds, so you want to select an area or only capture the active window, you may have to set an approriate keybind yourself. I'm still working on fixing that, though.
+
+### Polkit rules for "Apps as Root"
+
+Not elegant but those files need to be copied individually to `usr/share/polkit-1/actions` to not accidentally overwrite existing actions folder (requires root):
+
+```
+# cp ~/.fluxbox/polkit-1/actions/org.freedesktop.alacritty.policy /usr/share/polkit-1/actions
+# cp ~/.fluxbox/polkit-1/actions/org.lxde.pcmanfm.policy /usr/share/polkit-1/actions
+# cp ~/.fluxbox/polkit-1/actions/org.xfce.xfce4-terminal /usr/share/polkit-1/actions
+```
+You can also write your own policies for each program for more granular privileges.
+
+[Arch Wiki: Polkit](https://wiki.archlinux.org/title/Polkit)
 
 ## TODO
 
