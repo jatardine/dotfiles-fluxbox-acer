@@ -60,7 +60,7 @@ If you want to use the default background, open your terminal and run feh:
 
 `$ feh --bg-scale ~/.fluxbox/backgrounds/aglaisio.jpg`
 
-Feh will then automatically create the necessary `.fehbg` called by the startup script.
+Feh will then automatically create the necessary `.fehbg` called by the startup script. Make it executable with `chmod +x`.
 
 If you want to use a different background, you first need to remove the default background from `overlay` to prevent it from overwriting your desired wallpaper. Then simply run the feh command above but replace the path with the one where your desired background is located. Alternatively, you can also copy your background to `backgrounds` and only replace `/algaisio.jpg` with your file's name.
 
