@@ -8,10 +8,14 @@
 # Disabled due to lack of reliance on Xmodmap.
 # xmodmap "~/.Xmodmap"
 
+# Start xfce-polkit authenticator
+
+/usr/lib/xfce-polkit/xfce-polkit &
+
 # Applications you want to run with fluxbox.
 # MAKE SURE THAT APPS THAT KEEP RUNNING HAVE AN ''&'' AT THE END.
 nm-applet &
-dunst &
+xfce4-notifyd &
 cbatticon &
 volumeicon &
 xfsettingsd &
