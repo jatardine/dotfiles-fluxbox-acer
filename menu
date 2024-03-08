@@ -8,7 +8,7 @@
         [exec] (Alacritty) {pkexec alacritty}
         [exec] (Xfce Terminal) {pkexec xfce4-terminal}
         [exec] (PCManFM) {pkexec pcmanfm}
-        [exec] (Vim) {xfce4-terminal --command="pkexec vim"}
+        [exec] (Vim) {pkexec xfce4-terminal --command="vim"}
     [end]
 [separator]
     [submenu] (Development)
