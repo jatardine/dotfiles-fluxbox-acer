@@ -13,9 +13,9 @@ to execute any terminal with `sudo [PROGRAM]`. It doesn't work with non-CLI prog
 to constantly spawning new terminal processes that fail at gaining root privileges.
 
 **Directly executed via menu:**
- Alacritty (`pkexec alacritty`)
- Xfce Terminal (`pkexec xfce4-terminal`)
- PCMANFM (`pkexec pcmanfm`)
+- Alacritty (`pkexec alacritty`)
+- Xfce Terminal (`pkexec xfce4-terminal`)
+- PCMANFM (`pkexec pcmanfm`)
 
 Because I always want to open Vim in a privileged Xfce Terminal, I set Fluxbox to open Xfce Terminal to execute 
 Vim:
