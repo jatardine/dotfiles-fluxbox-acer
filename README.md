@@ -17,6 +17,7 @@ This is one of my three different Fluxbox configs and the most bare-bone with li
 - cbatticon (systray)
 - Feh (background)
 - PulseAudio (sorry lmao)
+- Polkit & xfce-polkit ("Apps as Root")
 
 **Optional but recommended:**
 
