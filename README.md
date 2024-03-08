@@ -86,16 +86,16 @@ At this time, `scrot` refuses to capture anything but the entire screen via keyb
 
 ### Polkit rules for "Apps as Root"
 
-Not elegant but those files need to be copied individually to `/usr/share/polkit-1/actions` to not accidentally overwrite existing actions folder (requires root):
+Not elegant but those files need to be copied individually to `/usr/share/polkit-1/actions` to not accidentally overwrite existing actions folder (requires root). It's up to you whether to use the files from the cloned git or your local copy in ~/.fluxbox (assuming you copied and pasted this git as is):
 
 ```
 # cp ~/.fluxbox/polkit-1/actions/org.freedesktop.alacritty.policy /usr/share/polkit-1/actions
 # cp ~/.fluxbox/polkit-1/actions/org.lxde.pcmanfm.policy /usr/share/polkit-1/actions
 # cp ~/.fluxbox/polkit-1/actions/org.xfce.xfce4-terminal /usr/share/polkit-1/actions
 ```
-You can also write your own policies for each program for more granular privileges.
+You can also write your own policies for each program for more granular privileges. Once you're done, feel free to remove the Polkit directory from your ~/.fluxbox.
 
-[Arch Wiki: Polkit](https://wiki.archlinux.org/title/Polkit)
+See: [Arch Wiki: Polkit](https://wiki.archlinux.org/title/Polkit)
 
 ## TODO
 
