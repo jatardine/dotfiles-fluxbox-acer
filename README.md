@@ -86,7 +86,7 @@ At this time, `scrot` refuses to capture anything but the entire screen via keyb
 
 ### Polkit rules for "Apps as Root"
 
-Not elegant but those files need to be copied individually to `usr/share/polkit-1/actions` to not accidentally overwrite existing actions folder (requires root):
+Not elegant but those files need to be copied individually to `/usr/share/polkit-1/actions` to not accidentally overwrite existing actions folder (requires root):
 
 ```
 # cp ~/.fluxbox/polkit-1/actions/org.freedesktop.alacritty.policy /usr/share/polkit-1/actions
