@@ -18,10 +18,10 @@ This is one of my three different Fluxbox configs and the most bare-bone with li
 - Feh (background)
 - PulseAudio (sorry lmao)
 - Polkit & xfce-polkit ("Apps as Root")
+- xfce4-notifyd (notification daemon)
 
 **Optional but recommended:**
 
-- Dunst (notifications)
 - menumaker
 
 Menu dependencies (optional – you may change `menu` according to your usecase):
