@@ -53,11 +53,6 @@ Mod4 Shift Tab :PrevTab
 ! Workspaces !
 !____________!
 
-! Due to Fluxbox not interpreting keysyms, key names must be used. In !
-! case of special keys such as Fn and Fn-dependent key combinations,  !
-! the exact key codes may be used. To determine key names and codes,  !
-! use xev and check the third line of each output.                    !
-
 # switch to a specific workspace using CTRL + number keys
 
 Control 1 :Workspace 1
