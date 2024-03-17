@@ -1,142 +1,188 @@
-!!!!!!!!!!!!!!!!!!!!!!!!
-! Fluxbox Keybinds     !
-! Written by jatardine !   
-!!!!!!!!!!!!!!!!!!!!!!!!
+#          Fluxbox Keybinds             #
+#            by jatardine               #
+#              (c) 2024                 #
+#                                       #
+# see manpage for fluxbox-keys for more #
 
+!-------------------------!
+! Mod1: Alt key           !
+! Mod4: Super/Windows key !
+!-------------------------!
 
-#########
-# Mouse #
-#########
+################################################################################
 
-# click on the desktop to get menus
-OnDesktop Mouse1 :HideMenus
-OnDesktop Mouse2 :WorkspaceMenu
-OnDesktop Mouse3 :RootMenu
+!________!
+! Window !
+!________!
 
-# scroll on the desktop to change workspaces
-OnDesktop Mouse4 :PrevWorkspace
-OnDesktop Mouse5 :NextWorkspace
+# basics (close window, kill window, min & max window, fullscreen)
+Mod4 Q :Close
+Mod4 Escape :Kill
+Mod4 F9 :Minimize
+Mod4 F10 :Maximize
+Mod4 F11 :Fullscreen
 
-# scroll on the toolbar to change current window
-OnToolbar Mouse4 :PrevWindow {static groups} (iconhidden=no)
-OnToolbar Mouse5 :NextWindow {static groups} (iconhidden=no)
-
-# alt + left/right click to move/resize a window
-OnWindow Mod1 Mouse1 :MacroCmd {Raise} {Focus} {StartMoving}
-OnWindowBorder Move1 :StartMoving
-
-OnWindow Mod1 Mouse3 :MacroCmd {Raise} {Focus} {StartResizing NearestCorner}
-OnLeftGrip Move1 :StartResizing bottomleft
-OnRightGrip Move1 :StartResizing bottomright
-
-# alt + middle click to lower the window
-OnWindow Mod1 Mouse2 :Lower
-
-# control-click a window's titlebar and drag to attach windows
-OnTitlebar Control Mouse1 :StartTabbing
-
-# double click on the titlebar to shade
-OnTitlebar Double Mouse1 :Shade
-
-# left click on the titlebar to move the window
-OnTitlebar Mouse1 :MacroCmd {Raise} {Focus} {ActivateTab}
-OnTitlebar Move1  :StartMoving
-
-# middle click on the titlebar to lower
-OnTitlebar Mouse2 :Lower
-
-# right click on the titlebar for a menu of options
-OnTitlebar Mouse3 :WindowMenu
-
-
-##########
-# Window #
-##########
-
-# current window commands (I don't know why Control Q already executes :Close without specifying)
-Control Q :Close	
-Mod1 K :Kill
-Mod1 F9 :Minimize
-Mod1 F10 :Maximize
-Mod1 F11 :Fullscreen
-
-# open the window menu
+# open window menu
 Mod4 space :WindowMenu
 
 # change to previous/next workspace
 Control Mod4 Left :PrevWorkspace
 Control Mod4 Right :NextWorkspace
 
-# send the current window to previous/next workspace
-# Mod1 Left :SendToPrevWorkspace
-# Mod1 Right :SendToNextWorkspace
+# send current window to previous/next workspace
+Mod1 Left :SendToPrevWorkspace
+Mod1 Right :SendToNextWorkspace
 
-# send the current window and follow it to previous/next workspace
+# send current window and switch to sent workspace
 Control Mod1 Left :TakeToPrevWorkspace
 Control Mod1 Right :TakeToNextWorkspace
 
+################################################################################
 
-###########
-# Tabbing #
-###########
+!_________!
+! Tabbing !
+!_________!
 
-# alt-tab
-Mod1 Tab :NextWindow {groups} (workspace=[current])
-Mod1 Shift Tab :PrevWindow {groups} (workspace=[current])
-
-# cycle through tabs in the current window
+# cycle through tabs in current window
 Mod4 Tab :NextTab
 Mod4 Shift Tab :PrevTab
 
+################################################################################
 
-##############
-# Workspaces #
-##############
+!____________!
+! Workspaces !
+!____________!
 
-# change to a specific workspace
-Control F1 :Workspace 1
-Control F2 :Workspace 2
-Control F3 :Workspace 3
-Control F4 :Workspace 4
+! Due to Fluxbox not interpreting keysyms, key names must be used. In !
+! case of special keys such as Fn and Fn-dependent key combinations,  !
+! the exact key codes may be used. To determine key names and codes,  !
+! use xev and check the third line of each output.                    !
 
-# send the current window to a specific workspace
-Mod4 F1 :SendToWorkspace 1
-Mod4 F2 :SendToWorkspace 2
-Mod4 F3 :SendToWorkspace 3
-Mod4 F4 :SendToWorkspace 4
+# switch to a specific workspace using CTRL + number keys
 
-# send the current window and change to a specific workspace
-Control Mod4 F1 :TakeToWorkspace 1
-Control Mod4 F2 :TakeToWorkspace 2
-Control Mod4 F3 :TakeToWorkspace 3
-Control Mod4 F4 :TakeToWorkspace 4
+Control 1 :Workspace 1
+Control 2 :Workspace 2
+Control 3 :Workspace 3
+Control 4 :Workspace 4
 
+# send the current window to a specific workspace using Super + number keys
+Mod4 1 :SendToWorkspace 1
+Mod4 2 :SendToWorkspace 2
+Mod4 3 :SendToWorkspace 3
+Mod4 4 :SendToWorkspace 4
 
-#########
-# Audio #
-#########
+# send the current window and switch to sent workspace using Super + number keys
+Control Mod4 1 :TakeToWorkspace 1
+Control Mod4 2 :TakeToWorkspace 2
+Control Mod4 3 :TakeToWorkspace 3
+Control Mod4 4 :TakeToWorkspace 4
 
-# volume settings, using common keycodes
-# if these don't work, use xev to find out your real keycodes
+################################################################################
+
+!__________!
+! Programs !
+!__________!
+
+! Some shortcuts to specific programs. Naturally, they won't work if   !
+! you don't have those installed.                                      !
+
+# open Terminal Emulator (Alacritty)
+Mod4 t :Exec alacritty
+
+# open fbrun
+Mod4 r :Exec fbrun
+
+# open File Manager (PCManFM)
+Mod4 f :Exec pcmanfm
+
+################################################################################
+
+!____________!
+! Screenshot !
+!____________!
+
+! This config assumes that you've got scrot and viewnior installed. !
+
+# take a screenshot of the entire screen
+Print 0x61 :Exec scrot 'Screenshot_%Y-%m-%d-%I-%M-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir     PICTURES) ; viewnior $$(xdg-user-dir PICTURES)/$f'
+ 
+# take a screenshot of a selected area with Super + s + Print
+Print 0x73 :Exec scrot -s 'Screenshot_%Y-%m-%d-%I-%M-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir     PICTURES) ; viewnior $$(xdg-user-dir PICTURES)/$f'
+ 
+# take a screenshot of active window Super + w + Print
+Print 0x77 :Exec scrot -u 'Screenshot_%Y-%m-%d-%I-%M-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir     PICTURES) ; viewnior $$(xdg-user-dir PICTURES)/$f'
+
+################################################################################
+
+!_______!
+! Audio !
+!_______!
+
+! Those keys are dependent on your XF86 key configurations. This       !
+! keybind config assumes you DON'T have xkeybinds installed or         !
+! configured globally but still want Fluxbox to handle it the XFree86  !
+! way.                                                                 !
+! Alternatively, you can use keycodes but they may be tied to your     !
+! specific keyboard and thus make portability harder.                  !
+
+# volume settings
 XF86AudioRaiseVolume :Exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 XF86AudioLowerVolume :Exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 XF86AudioMute :Exec pactl set-sink-mute 0 toggle
 
+#################################################################################
 
-##############
-# Screenshot #
-##############
+!_______!
+! Mouse !
+!_______!
 
-# take a screenshot (full)
-Print :Exec scrot 'Screenshot_%Y-%m-%d-%I-%M-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir PICTURES) ; viewnior $$(xdg-user-dir PICTURES)/$f'
+!--------------------!
+! Mouse1: Left       !
+! Mouse2: Middle     !
+! Mouse3: Right      !
+! Mouse4: Wheel Up   !
+! Mouse5: Wheel Down !
+!--------------------!
 
+! Due to Fluxbox by default assuming a classic Desktop environment !
+! with mouse usage, Mouse4 and Mouse5 are NOT used for this config !
+! and due to this laptop's lack of a middle button, Mouse2 remains !
+! unused, as well.                                                 !
 
-############
-# Programs #
-############
+# click on the desktop to get menus
+OnDesktop Mouse1 :HideMenus
+# OnDesktop Mouse2 :WorkspaceMenu
+OnDesktop Mouse3 :RootMenu
 
-# open a terminal
-Mod4 return :Exec alacritty
+# scroll on the desktop to change workspaces
+# OnDesktop Mouse4 :PrewWorkspace
+# OnDesktop Mouse5 :NextWorkspace
 
-# open a dialog to run programs (for some reason no key combination calls fbrun and I don't use it, so it's disabled for now)
-# Mod1 return :Exec fbrun
+# scroll on the toolbar to change current window
+# OnToolbar Mouse4 :PrevWindow {static groups} (iconhidden=no)
+# OnToolbar Mouse5 :NextWindow {static groups} (iconhidden=no)
+
+# move window (from default; prevents resizing of window and in PCManFM
+# access to files so idk why this is a non-issue in the original config
+# OnWindow Mod1 Mouse1 :MacroCmd {Raise} {Focus} {StartMoving}
+# OnWindow Move1 :StartMoving
+
+# resize window
+OnWindow Mod1 Mouse3 :MacroCmd {Raise} {Focus} {StartResizing NearestCorner}
+OnLeftGrip Move1 :StartResizing bottomleft
+OnRightGrip Move1 :StartResizing bottomright
+
+# tab windows
+OnTitlebar Control Mouse1 :StartTabbing
+
+# move window by grabbing its titlebar
+# OnTitlebar Mouse1 :MacroCmd {Raise} {Focus} {ActivateTab}
+OnTitlebar Move1 :StartMoving
+
+# access window menu
+OnTitlebar Mouse3 :WindowMenu
+
+#################################################################################
+
+# EOF #
+
