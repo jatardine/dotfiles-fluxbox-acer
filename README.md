@@ -97,8 +97,8 @@ You can also write your own policies for each program for more granular privileg
 
 See: [Arch Wiki: Polkit](https://wiki.archlinux.org/title/Polkit)
 
-## TODO
+## TODO (will be removed soon due to no longer being needed)
 
-- clean up `keys`
+- ✓ clean up `keys`
 - ✓ include theme for Alacritty
 - ✓ sort this repo
