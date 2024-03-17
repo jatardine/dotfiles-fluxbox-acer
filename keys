@@ -53,20 +53,20 @@ Mod4 Shift Tab :PrevTab
 ! Workspaces !
 !____________!
 
-# switch to a specific workspace using CTRL + number keys
+# switch to a specific workspace
 
 Control 1 :Workspace 1
 Control 2 :Workspace 2
 Control 3 :Workspace 3
 Control 4 :Workspace 4
 
-# send the current window to a specific workspace using Super + number keys
+# send the current window to a specific workspace
 Mod4 1 :SendToWorkspace 1
 Mod4 2 :SendToWorkspace 2
 Mod4 3 :SendToWorkspace 3
 Mod4 4 :SendToWorkspace 4
 
-# send the current window and switch to sent workspace using Super + number keys
+# send the current window and switch to sent workspace
 Control Mod4 1 :TakeToWorkspace 1
 Control Mod4 2 :TakeToWorkspace 2
 Control Mod4 3 :TakeToWorkspace 3
@@ -99,13 +99,13 @@ Mod4 f :Exec pcmanfm
 ! This config assumes that you've got scrot and viewnior installed. !
 
 # take a screenshot of the entire screen
-Print 0x61 :Exec scrot 'Screenshot_%Y-%m-%d-%I-%M-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir     PICTURES) ; viewnior $$(xdg-user-dir PICTURES)/$f'
+Print a :Exec scrot 'Screenshot_%Y-%m-%d-%I-%M-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir     PICTURES) ; viewnior $$(xdg-user-dir PICTURES)/$f'
  
-# take a screenshot of a selected area with Super + s + Print
-Print 0x73 :Exec scrot -s 'Screenshot_%Y-%m-%d-%I-%M-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir     PICTURES) ; viewnior $$(xdg-user-dir PICTURES)/$f'
+# take a screenshot of a selected area
+Print s :Exec scrot -s 'Screenshot_%Y-%m-%d-%I-%M-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir     PICTURES) ; viewnior $$(xdg-user-dir PICTURES)/$f'
  
-# take a screenshot of active window Super + w + Print
-Print 0x77 :Exec scrot -u 'Screenshot_%Y-%m-%d-%I-%M-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir     PICTURES) ; viewnior $$(xdg-user-dir PICTURES)/$f'
+# take a screenshot of active window
+Print w :Exec scrot -u 'Screenshot_%Y-%m-%d-%I-%M-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir     PICTURES) ; viewnior $$(xdg-user-dir PICTURES)/$f'
 
 ################################################################################
 
