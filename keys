@@ -29,9 +29,9 @@ Mod4 space :WindowMenu
 Control Mod4 Left :PrevWorkspace
 Control Mod4 Right :NextWorkspace
 
-# send current window to previous/next workspace
-Mod1 Left :SendToPrevWorkspace
-Mod1 Right :SendToNextWorkspace
+# send current window to previous/next workspace (no thanks, this is messing with my file manager navigation)
+# Mod1 Left :SendToPrevWorkspace
+# Mod1 Right :SendToNextWorkspace
 
 # send current window and switch to sent workspace
 Control Mod1 Left :TakeToPrevWorkspace
