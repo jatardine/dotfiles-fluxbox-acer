@@ -29,6 +29,7 @@
         [exec] (ALSA mixer) {alacritty -e alsamixer}
         [exec] (Echomixer) {echomixer}
         [exec] (Envy24 Control) {envy24control}
+        [exec] (fooyin) {fooyin}
         [exec] (HDAJackRetask) {hdajackretask}
         [exec] (HDSPConf) {hdspconf}
         [exec] (HDSPMixer) {hdspmixer}
@@ -45,11 +46,15 @@
         [exec] (Avahi SSH Server Browser) {bssh}
         [exec] (Avahi VNC Server Browser) {bvnc}
         [exec] (hx) {alacritty -e hx}
+        [exec] (Kaiteki) {kaiteki}
+        [exec] (KeePassXC) {keepassxc}
         [exec] (Lagrange) {lagrange}
         [exec] (LibreWolf) {/usr/lib/librewolf/librewolf}
         [exec] (Lynx) {alacritty -e lynx}
         [exec] (Mail Reader) {exo-open --launch MailReader}
         [exec] (NetworkManager Dmenu) {networkmanager_dmenu}
+        [exec] (Reflector Simple) {reflector-simple}
+        [exec] (rtorrent) {xfce4-terminal -e rtorrent}
         [exec] (Web Browser) {exo-open --launch WebBrowser}
         [exec] (Wike) {wike}
     [end]
