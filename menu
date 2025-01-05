@@ -121,7 +121,6 @@
         [exec] (Console Matrix [Virtual Console]) {alacritty -e cmatrix -l}
         [exec] (Console Matrix [X11]) {cmatrix -x}
         [exec] (File Manager) {exo-open --launch FileManager}
-        [exec] (Info) {alacritty -e info}
         [exec] (picom) {picom}
         [exec] (Terminal Emulator) {exo-open --launch TerminalEmulator}
         [exec] (Xarchiver) {xarchiver}
