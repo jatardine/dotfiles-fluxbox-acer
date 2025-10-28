@@ -83,8 +83,12 @@ You can also write your own policies for each program for more granular privileg
 
 See: [Arch Wiki: Polkit](https://wiki.archlinux.org/title/Polkit)
 
-## TODO (will be removed soon due to no longer being needed)
+## Common issues
 
-- ✓ clean up `keys`
-- ✓ include theme for Alacritty
-- ✓ sort this repo
+1. volumeicon disappearing/not loading
+
+Check whether `gdk-pixbuf2` and `librsvg` were among the packages you recently updated. The first often gets borked due to poor testing whereas the second usually doesn't but switching to `gdk-pixbuf2-noclycin`(AUR) may not solve your issue either. The only way to mitigate it safely is to downgrade both to a working version (and for permanent peace and quiet to be blacklisted from future updates like any package provided by GNOME).
+
+2. PCManFM produces graphical artifacts next to the scroll bar and bottom of the window
+
+Though I haven't figured this one out myself yet but it may be due to some repositories such as that of Arch dropping GTK2. What I still need to figure out is why this messes up all GTK3 themes but then again `gtk3` also was among the latest updates when I first encountered this issue and only seems to affect software that still depends on GTK2 (including `steam-native-runtime` which Arch quietly dropped from its extra repo as well). A downgrade may solve this; alternatively I'd try to build and install `gtk2` manually to ensure proper support software still depending on it.
